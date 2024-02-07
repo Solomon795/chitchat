@@ -10,6 +10,9 @@ openai.api_key = 'your-openai-api-key'
 # Global variable to store conversation history
 conversation_history = []
 
+@app.route('/test')
+def hello():
+    print("Hello")
 
 # Default route to serve index.html
 @app.route('/')
