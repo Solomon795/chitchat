@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/test')
 def hello():
-    print("Hello")
+    return "Hello"
 
 # Default route to serve index.html
 # @app.route('/')
