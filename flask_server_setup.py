@@ -10,10 +10,12 @@ openai.api_key = 'your-openai-api-key'
 # Global variable to store conversation history
 conversation_history = []
 
+
 # Default route to serve index.html
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 # API route to handle POST requests
 @app.route('/api', methods=['POST'])
@@ -42,6 +44,6 @@ def api():
     # Return the generated text as JSON response
     return jsonify({'generated_text': generated_text})
 
-if __name__ == '__main__':
-    app.run(debug=True)
 
+if __name__ == '__main__':
+    app.run(debug=True, host="0.0.0.0", port=8080)
