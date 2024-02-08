@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 import yaml
 from chitchat_bot import Chatbot
 import uuid
@@ -11,6 +12,7 @@ bots = {}
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/')
